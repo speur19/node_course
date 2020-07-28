@@ -8,7 +8,8 @@ weatherForm.addEventListener("submit", (e) => {
 
     console.log(location)
 
-fetch('http://api.weatherstack.com/current?access_key=52d0e4628db67c7290c87e1e4f309e84&query='+ location). then((response) => {
+fetch('https://api.weatherstack.com/current?access_key=52d0e4628db67c7290c87e1e4f309e84&query='+ location). 
+    then((response) => {
     response.json().then((data) => {
         if(data.error){
             console.log(data.error.info)
